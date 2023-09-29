@@ -22,7 +22,9 @@
 Создайте Maven проект, чтобы установить все необходимые зависимости.
 Чтобы настроить базу данных, установите PostgreSql. Создайте любую базу данных.
 Затем обновите три поля конфигурации ниже в файле application.properties внутри папки /resources.
+```
 spring.datasource.url=jdbc:postgresql://localhost:5432/dsolo
 spring.datasource.username=dsolo
 spring.datasource.password=1234
+```
 
