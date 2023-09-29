@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Конвертер валют</title>
+		<link rel="stylesheet" href="/css/index.css" />
+	</head>
+	<body>
+		<label>Перевод с:</label>
+		<div>
+			<select id="cur1">
+				<option th:each="c: ${currencies}"
+				th:value="${c.id}"
+				th:text="${c.name}"></option>
+			</select>
+		</div>
+		<label>В: </label>
+		<div>
+			<select id="cur2">
+				<option th:each="c: ${currencies}"
+				th:value="${c.id}"
+				th:text="${c.name}"></option>
+			</select>
+		</div>
+		<label>Сумма: </label> 
+		<div>
+			<input type="text" id="sum">
+		</div>
+		<div>
+			<button id="convert">Конвертировать</button>
+		</div>
+		<label>Результат: </label>
+		<span id="result"></span><br />
+		<div class="bankrates">
+			<h2>ДОЛЛАР США</h2>
+			<table id="table1">
+				<tr>
+					<th></th>
+					<th>Продать</th>
+					<th>Купить</th>
+				</tr>
+			</table>
+			<h2>ЕВРО</h2>
+			<table id="table2">
+				<tr>
+					<th></th>
+					<th>Продать</th>
+					<th>Купить</th>
+				</tr>
+			</table>
+		</div>
+			<h2 id="chartHeader">Динамика</h2>
+		<div>
+			<select id="period">
+				<option selected="selected">Неделя</option>
+				<option>Месяц</option>
+				<option>Год</option>
+			</select>
+		</div>
+			<button id="dynamic">Показать</button>
+		<div id="container" style="height: 500px; width: 600px"></div>
+		<script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+		</script>
+		<script src="/js/convertEvent.js"></script>
+		<script src="/js/dynamicEvent.js"></script>
+		<script src="/js/bankRates.js"></script>
+	</body>
+</html>

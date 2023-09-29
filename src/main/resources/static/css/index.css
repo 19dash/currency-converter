@@ -1,0 +1,28 @@
+body {
+  font-family: "FreeMono", monospace;
+  font-size: 21px; /* Increased text to enable scrolling */
+  word-wrap:break-word;
+  background-color: #dde0cb;
+  width:600px;
+}
+input, select {
+  border: 1px solid #d5f7e7;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+button {
+	 border: 1px solid #b7bd91;
+  border-radius: 4px;
+  background-color: #c6cba7;
+}
+.bankrates {
+ 
+  margin: 8px 0;
+  border: 1px solid #54be82;
+  border-radius: 4px;
+  background-color: #8fe29a;
+ 
+  position: fixed;
+  top: 0;
+  left: 630px;
+}
